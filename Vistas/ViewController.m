@@ -42,10 +42,31 @@
     UIView *vistaVerde = [[UIView alloc] initWithFrame:CGRectMake(0, rectVistaRoja.size.height /2, rectVistaRoja.size.width, rectVistaRoja.size.height/2)];
     vistaVerde.backgroundColor = [UIColor greenColor];
     
+    vistaVerde.layer.borderWidth = 10;
+    vistaVerde.layer.borderColor = [[UIColor brownColor] CGColor];
+    vistaVerde.layer.cornerRadius = 8;
+    vistaVerde.clipsToBounds = true;
+    
     // Añadimos la vista amarilla dentro de la vista roja
     [vistaRoja addSubview:vistaVerde];
     
+    // Animacion cambia de color y cambia el frame
+//    [UIView animateWithDuration:3 animations:^{
+//        
+//        vistaVerde.backgroundColor = [UIColor blueColor]; vistaVerde.frame = CGRectMake(0, 0, rectVistaRoja.size.width, rectVistaRoja.size.height / 2);
+//    }];
     
+//    [UIView animateWithDuration:3 delay:0 options:
+//     UIViewAnimationOptionAutoreverse |
+//     UIViewAnimationOptionRepeat |
+//     UIViewAnimationCurveEaseInOut
+//     animations:^ {
+//         vistaVerde.backgroundColor = [UIColor blueColor]; vistaVerde.frame = CGRectMake(0, 0, rectVistaRoja.size.width, rectVistaRoja.size.height / 2);
+//         
+//     } completion:^(BOOL finished) {
+//         
+//     }];
+
 }
 
 
